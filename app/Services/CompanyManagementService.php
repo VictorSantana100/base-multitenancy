@@ -15,4 +15,8 @@ class CompanyManagementService{
     public function getCollaborators($company_uuid){
         return $this->repository->getCollaborators($company_uuid);
     }
+
+    public function getSuppliers($company_uuid){
+        return $this->repository->getSuppliers($company_uuid);
+    }
 }

@@ -11,7 +11,7 @@ class StoreUpdateSupplierFormRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -19,10 +19,12 @@ class StoreUpdateSupplierFormRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
-    public function rules(): array
+    public function rules()
     {
         return [
-            //
+            'name' => 'required',
+            'email' => 'required|email|unique:suppliers,email,'. $this->route('id'),
+            'company_id' => 'required'
         ];
     }
 }

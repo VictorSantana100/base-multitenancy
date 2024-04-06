@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('company_suppliers', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('company_id')->nullable()->constrained('companies');
-            $table->foreignId('supplier_id')->nullable()->constrained('suppliers');
+            $table->foreignId('company_id')->constrained('companies');
+            $table->foreignId('supplier_id')->constrained('suppliers');
             $table->timestamps();
         });
     }
