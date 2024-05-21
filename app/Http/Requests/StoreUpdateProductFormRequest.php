@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreUpdateSupplierFormRequest extends FormRequest
+class StoreUpdateProductFormRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -19,12 +19,10 @@ class StoreUpdateSupplierFormRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
-    public function rules()
+    public function rules(): array
     {
         return [
-            'name' => 'required',
-            'email' => 'required|email|unique:suppliers,email,'. $this->route('id'),
-            'company_id' => 'required'
+            'name' => 'required'
         ];
     }
 }

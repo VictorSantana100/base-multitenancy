@@ -15,7 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('price');
+            $table->string('code')->nullable();
             $table->string('validity')->nullable();
+            $table->foreignId('type_id')->constrained('types');
             $table->timestamps();
         });
     }

@@ -3,7 +3,8 @@
 use App\Http\Controllers\Api\User\UserController;
 use App\Http\Controllers\Api\Company\CompanyController;
 use App\Http\Controllers\Api\Company\CompanyManagementController;
-use Illuminate\Http\Request;
+use App\Http\Controllers\Api\Supplier\SupplierController;
+use App\Http\Controllers\Api\Product\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,7 +31,13 @@ Route::middleware('auth:sanctum')->group(function (){
 });
 
 
-Route::resource('company', CompanyController::class);
-Route::get('company-collaborators', [CompanyManagementController::class, 'getCollaborators']);
+Route::get('company-collaborator', [CompanyManagementController::class, 'collaborators']);
+Route::get('company-supplier/{company_uuid}', [CompanyManagementController::class, 'suppliers']);
 
+Route::resource('company', CompanyController::class);
 Route::resource('user', UserController::class);
+Route::resource('supplier', SupplierController::class);
+Route::resource('product', ProductController::class);
+Route::resource('type', ProductController::class);
+Route::resource('category', ProductController::class);
+Route::resource('equipament', ProductController::class);

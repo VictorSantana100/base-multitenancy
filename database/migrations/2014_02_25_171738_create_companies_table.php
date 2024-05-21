@@ -16,11 +16,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('abbreviation')->nullable();
-            $table->string('email');
+            $table->string('email')->unique();
             $table->uuid('uuid')->default(DB::raw('UUID()'));
             $table->string('logo')->nullable();
-            $table->string('cnpj')->nullable();
-            
+            $table->string('cnpj')->unique()->nullable();
+            $table->string('company_id')->nullable();
             $table->timestamps();
         });
     }
