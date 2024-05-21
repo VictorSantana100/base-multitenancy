@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Equipament extends Model
 {
     use HasFactory;
+
+    protected $fillabble = [
+        'name',
+        'company_id'
+    ];
 }
