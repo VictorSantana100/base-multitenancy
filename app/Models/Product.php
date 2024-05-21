@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+
+    protected $fillabble = [
+        'name',
+        'price',
+        'code',
+        'validity',
+        'type_id'
+    ];
 }
