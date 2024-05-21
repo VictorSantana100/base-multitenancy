@@ -5,7 +5,11 @@ use App\Http\Controllers\Api\Company\CompanyController;
 use App\Http\Controllers\Api\Company\CompanyManagementController;
 use App\Http\Controllers\Api\Supplier\SupplierController;
 use App\Http\Controllers\Api\Product\ProductController;
+use App\Http\Controllers\Api\Category\CategoryController;
+use App\Http\Controllers\Api\Equipament\EquipamentController;
+use App\Http\Controllers\Api\Type\TypeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\Profile\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +42,7 @@ Route::resource('company', CompanyController::class);
 Route::resource('user', UserController::class);
 Route::resource('supplier', SupplierController::class);
 Route::resource('product', ProductController::class);
-Route::resource('type', ProductController::class);
-Route::resource('category', ProductController::class);
-Route::resource('equipament', ProductController::class);
+Route::resource('type', TypeController::class);
+Route::resource('category', CategoryController::class);
+Route::resource('equipament', EquipamentController::class);
+Route::resource('profile', ProfileController::class);
