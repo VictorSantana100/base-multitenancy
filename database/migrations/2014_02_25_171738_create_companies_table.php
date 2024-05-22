@@ -20,7 +20,6 @@ return new class extends Migration
             $table->uuid('uuid')->default(DB::raw('UUID()'));
             $table->string('logo')->nullable();
             $table->string('cnpj')->unique()->nullable();
-            $table->string('company_id')->nullable();
             $table->timestamps();
         });
     }
