@@ -2,7 +2,13 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "keywords": ["control", "cyber"],
+    "authors": [
+        {
+            "name": "Victor Santana",
+            "email": "santanav589@gmail.com"
+        }
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.1",
